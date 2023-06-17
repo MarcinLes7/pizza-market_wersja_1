@@ -14,13 +14,7 @@
         <p th:text="${firstName}"></p> &lt;!&ndash;tu będziemy dostarcząć do naszego szablony z zmienną &ndash;&gt;
     </div> &lt;!&ndash;i teraz konternret w aleznoscu od szerokości bedzie się dostosowywał&ndash;&gt;-->
 
-    <nav style="" id="page-nav"> <!--korzystamy ze znacznika nav - od nawigacja-->
-        <div class="container" id="nav-row"> <!--stwarzamy div o klasie kontainer - co zapewni nam szerokość naszej strony-->
-            <a th:href="@{/}" id="logo">Pizza market</a> <!--to sa linki do naszego menu na górze-->
-            <a class="nav-item" href="">Menu</a>
-            <a class="nav-item" href="">Dostawa</a>
-            <a class="nav-item" href="">Resto</a>
-        </div>
+    <nav th:replace="~{fragments/navigation :: nav}"></nav> <!--chodzi o to, żewyciągamy fragment ze strony, która będzie się pojawiała w tym samym miejscu na kazdej stronie -->
 
         <section id="home-page-section"> <!--do rozdzielenia zawartosci znaczniek section-->
             <div class="container"> <!--w nim ponownie kontener zapoewniający marginesy i stałą szerokość-->
@@ -36,7 +30,7 @@
                 </div>
             </div>
         </section>
-    </nav>
+
 
 
 
