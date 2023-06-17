@@ -11,4 +11,5 @@ public class HomeController { // ta klasa to jest kontroller do strony głównej
         model.addAttribute("firstName", "Janek"); // i gdy mamy ten parametr tomożemy dodać cos do tej metody
         return "homePage";   // metoda zawsze zwraca nazwe tego templejtu
     }
+
 }
