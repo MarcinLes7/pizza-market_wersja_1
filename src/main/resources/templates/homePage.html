@@ -1,20 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="https://www.thymeleaf.org"> <!--tu deklarujemy, że będziemy korzystać z przestrzeni nazw temleafa-->
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width", initial-scale="1.0"> <!--dzięki temu wierszowu zawartośc strony dostosowuje się do urządzenia a nie do okna przeglądarki-->
-    <title>Pizza Market</title>
-    <link rel="stylesheet" th:href="@{/css/fonts.css}"> <!--musimy zadeklarowac pobranie styli dla czcionek i styli z plików css, nie możemy sie odwoływac poprzez ścieżkę o nazwy pliku tylko przez atrybut thymeleafa z małpą @{}-->
-    <link rel="stylesheet" th:href="@{/css/style.css}"> <!--thymelif umieszcza wszystkie pliki w roocie, którym jest resources/static. Więc w tm roocie katalogi i pliki sa -->
-</head>
-<body>
-    <!--poniżej są próby z pierwszej części-->
-    <!--<div class="container"> &lt;!&ndash;to robimy sobie na pczątek, żeby sprawdzić czy działa, a jak ustawimy już style i sresponsywność to stwarzamy w body element blokowy, który będzie miała klase kontainer&ndash;&gt;
-                    &lt;!&ndash;container to nazwa klasy którą zadeklarowalismy w stylach&ndash;&gt;
-        <p th:text="${firstName}"></p> &lt;!&ndash;tu będziemy dostarcząć do naszego szablony z zmienną &ndash;&gt;
-    </div> &lt;!&ndash;i teraz konternret w aleznoscu od szerokości bedzie się dostosowywał&ndash;&gt;-->
-
-    <nav th:replace="~{fragments/navigation :: nav}"></nav> <!--chodzi o to, żewyciągamy fragment ze strony, która będzie się pojawiała w tym samym miejscu na kazdej stronie -->
+<html lang="en" xmlns:th="https://www.thymeleaf.org" th:replace="~{fragments/layout :: template (~{:: #home-page-section})}"> <!--tu deklarujemy, że będziemy korzystać z przestrzeni nazw temleafa-->
 
         <section id="home-page-section"> <!--do rozdzielenia zawartosci znaczniek section-->
             <div class="container"> <!--w nim ponownie kontener zapoewniający marginesy i stałą szerokość-->
@@ -30,10 +15,4 @@
                 </div>
             </div>
         </section>
-
-
-
-
-
-</body>
 </html>

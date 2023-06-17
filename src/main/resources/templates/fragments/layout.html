@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org" th:fragment="template (content)"> <!--fragment który się nazywa template i oczekuje parametru content-->
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" , initial-scale="1.0">
+    <!--dzięki temu wierszowu zawartośc strony dostosowuje się do urządzenia a nie do okna przeglądarki-->
+    <title>Pizza Market</title>
+    <link rel="stylesheet" th:href="@{/css/fonts.css}">
+    <!--musimy zadeklarowac pobranie styli dla czcionek i styli z plików css, nie możemy sie odwoływac poprzez ścieżkę o nazwy pliku tylko przez atrybut thymeleafa z małpą @{}-->
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <!--thymelif umieszcza wszystkie pliki w roocie, którym jest resources/static. Więc w tm roocie katalogi i pliki sa -->
+    <title>Title</title>
+</head>
+<body>
+
+    <nav th:replace="~{fragments/navigation :: nav}"></nav>
+
+    <section th:replace="${content}"> <!--oczekujemy, że to zostanie rpzekazane to sobie wyświetlimy-->
+
+    </section>
+
+</body>
+</html>
