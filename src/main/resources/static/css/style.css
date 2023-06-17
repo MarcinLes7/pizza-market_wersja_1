@@ -1,0 +1,95 @@
+/*zarządzanie podstawowa konfiguracja strony*/
+/* żeby skorzystac ze zmiennych robimy root i ustawiamy kolory */
+:root {
+    --primary: #222222; /*ustawiamy kolory, które będa wszędzie stosowane w rożnych obszarach*/
+    --secondary: #1E87F0;
+    --warning: #F0506E;
+    --white: #FFFFFF;
+}
+
+/*teraz deklarujemy nazwy czcionek, te czcionki poboeramy z internetu i deklarujemy*/
+html { /*robimy to na najwyzszym wskaxniku html, rodzina roboto i tym sansserif*/
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px; /*bazowa wielkość czcionek*/
+}
+
+html, body {
+    margin: 0; /*tu usuwamy margines podstawowy, tak, żeby nasze pisanie dochodziło do krawędzi*/
+}
+
+a {
+    text-decoration: inherit; /*tu chodzi o to żeby linki nie miały podkreslenia i miały odpowiendikolor, teks decoration jest dziedziczony po rodzicach czyli inherit*/
+    color: inherit;
+}
+
+.container { /*aby zawsze był wyśrodkowany na środku to można łatwo wyśrodkowac go - jak jest auto to jest wyśrodkowany*/
+    margin: 0 auto; /*nie trzeba dawać px bo zero to wartość bezwzględna*/
+}
+
+/*--------------------------------*/
+/*zarządzanie responsywnością strony*/
+/*chodzi o to zeby strona wyglądała dobrze na różnych urządzeniach - to się załatwa zarządzaniem szerokością, Strona ma zwykle zawartość*/
+
+@media only screen and (max-width: 992px) {
+    /*właściwośc media służy do zarządzani aresponsywnością - kiedy dane parametry stylu mają być uruchamiane - w zalezności od limitów szerokości na urzadzeniu zmieniszamy lub zwiększamu szerokość*/
+    /*to będzie uruchamiane tylk na wyświetlaczach o szerokości max która zadamy*/
+    .container { /*to jest element blokowy w którym będize zawarta cała strona i */
+        width: 90%;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    /*tu z kolei urzadzenia które mają przynajmniej 992px i dla nich ustawiamu 80% szerokości*/
+    .container {
+        width: 80%;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    /*a tu urządzenia mające przynajmniej 1200 i dla nich 50 %*/
+    .container {
+        width: 50%;
+    }
+
+    /*w tych trzech deklaracjach zawwarta jest cała responsywność*/
+}
+
+
+#page-nav {
+    padding: 10px 0
+}
+
+#nav-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#logo {
+    font-size: 2em
+}
+
+.nav-item {
+    text-transform: uppercase;
+    padding: 10px 0
+}
+
+.btn {
+    background-color: var(--secondary); /*przycisk jest niebieski więc odnosimy sie do secondary*/
+    padding: 16px;
+    text-transform: uppercase;
+    color: var(--white);
+    font-weight: 200;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.btn-sm { /*bo będzie inny mały przycisk w innym miejscu*/
+    padding: 5px 15px;
+    font-size: 0.8em;
+}
+
+#home-page-section .container div {
+    margin: 50px 0;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org"> <!--tu deklarujemy, że będziemy korzystać z przestrzeni nazw temleafa-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width", initial-scale="1.0"> <!--dzięki temu wierszowu zawartośc strony dostosowuje się do urządzenia a nie do okna przeglądarki-->
+    <title>Pizza Market</title>
+    <link rel="stylesheet" th:href="@{/css/fonts.css}"> <!--musimy zadeklarowac pobranie styli dla czcionek i styli z plików css, nie możemy sie odwoływac poprzez ścieżkę o nazwy pliku tylko przez atrybut thymeleafa z małpą @{}-->
+    <link rel="stylesheet" th:href="@{/css/style.css}"> <!--thymelif umieszcza wszystkie pliki w roocie, którym jest resources/static. Więc w tm roocie katalogi i pliki sa -->
+</head>
+<body>
+    <!--poniżej są próby z pierwszej części-->
+    <!--<div class="container"> &lt;!&ndash;to robimy sobie na pczątek, żeby sprawdzić czy działa, a jak ustawimy już style i sresponsywność to stwarzamy w body element blokowy, który będzie miała klase kontainer&ndash;&gt;
+                    &lt;!&ndash;container to nazwa klasy którą zadeklarowalismy w stylach&ndash;&gt;
+        <p th:text="${firstName}"></p> &lt;!&ndash;tu będziemy dostarcząć do naszego szablony z zmienną &ndash;&gt;
+    </div> &lt;!&ndash;i teraz konternret w aleznoscu od szerokości bedzie się dostosowywał&ndash;&gt;-->
+
+    <nav style="" id="page-nav"> <!--korzystamy ze znacznika nav - od nawigacja-->
+        <div class="container" id="nav-row"> <!--stwarzamy div o klasie kontainer - co zapewni nam szerokość naszej strony-->
+            <a th:href="@{/}" id="logo">Pizza market</a> <!--to sa linki do naszego menu na górze-->
+            <a class="nav-item" href="">Menu</a>
+            <a class="nav-item" href="">Dostawa</a>
+            <a class="nav-item" href="">Resto</a>
+        </div>
+
+        <section id="home-page-section"> <!--do rozdzielenia zawartosci znaczniek section-->
+            <div class="container"> <!--w nim ponownie kontener zapoewniający marginesy i stałą szerokość-->
+                <div>
+                    <img th:src="@{/img/hero-home.jpg}" alt="Pizza" style="width: 100%; height: 300px; object-fit: cover">
+                </div>
+                <div style="text-align: center">
+                    <h2 style="font-size: 2em">Pizza neapolitańska</h2>
+                    <p style="font-weight: 200">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus in magni quia ratione rerum vitae voluptatum? Ad aliquid atque aut beatae cupiditate dolore expedita hic, in ipsam minima molestiae nam natus neque non numquam odit officiis perspiciatis qui quibusdam quo rem similique sunt, suscipit tempore temporibus tenetur totam ullam unde?</p>
+                </div>
+                <div style="display: flex; flex-direction: row;justify-content: center"> <!--to wszystko do wysrodkowania przyciosku-->
+                    <a class="btn" href="">Sprawdź nasze menu</a>
+                </div>
+            </div>
+        </section>
+    </nav>
+
+
+
+
+
+
+
+
+</body>
+</html>
