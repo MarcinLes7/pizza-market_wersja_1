@@ -1,18 +1,23 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="https://www.thymeleaf.org" th:replace="~{fragments/layout :: template (~{:: #home-page-section})}"> <!--tu deklarujemy, że będziemy korzystać z przestrzeni nazw temleafa-->
-
-        <section id="home-page-section"> <!--do rozdzielenia zawartosci znaczniek section-->
-            <div class="container"> <!--w nim ponownie kontener zapoewniający marginesy i stałą szerokość-->
-                <div>
-                    <img th:src="@{/img/hero-home.jpg}" alt="Pizza" style="width: 100%; height: 300px; object-fit: cover">
-                </div>
-                <div style="text-align: center">
-                    <h2 style="font-size: 2em">Pizza neapolitańska</h2>
-                    <p style="font-weight: 200">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus in magni quia ratione rerum vitae voluptatum? Ad aliquid atque aut beatae cupiditate dolore expedita hic, in ipsam minima molestiae nam natus neque non numquam odit officiis perspiciatis qui quibusdam quo rem similique sunt, suscipit tempore temporibus tenetur totam ullam unde?</p>
-                </div>
-                <div style="display: flex; flex-direction: row;justify-content: center"> <!--to wszystko do wysrodkowania przyciosku-->
-                    <a class="btn" href="">Sprawdź nasze menu</a>
-                </div>
-            </div>
-        </section>
+<html lang="en" xmlns:th="https://www.thymeleaf.org"
+      th:replace="~{fragments/layout :: template (~{:: #home-page-section})}">
+<!--tu deklarujemy, że będziemy korzystać z przestrzeni nazw temleafa-->
+<section id="home-page-section"> <!--do rozdzielenia zawartosci znaczniek section-->
+    <div class="container"> <!--w nim ponownie kontener zapoewniający marginesy i stałą szerokość-->
+        <div>
+            <img th:src="@{/img/hero-home.jpg}" alt="Pizza" style="width: 100%; height: 300px; object-fit: cover">
+        </div>
+        <div style="text-align: center">
+            <h2 style="font-size: 2em">Pizza neapolitańska</h2>
+            <p style="font-weight: 200">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus in magni quia
+                ratione rerum vitae voluptatum? Ad aliquid atque aut beatae cupiditate dolore expedita hic, in ipsam
+                minima molestiae nam natus neque non numquam odit officiis perspiciatis qui quibusdam quo rem similique
+                sunt, suscipit tempore temporibus tenetur totam ullam unde?</p>
+        </div>
+        <div style="display: flex; flex-direction: row;justify-content: center">
+            <!--to wszystko do wysrodkowania przyciosku-->
+            <a class="btn" href="">Sprawdź nasze menu</a>
+        </div>
+    </div>
+</section>
 </html>
