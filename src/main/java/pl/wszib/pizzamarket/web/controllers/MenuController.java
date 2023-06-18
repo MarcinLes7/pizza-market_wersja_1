@@ -21,6 +21,7 @@ public class MenuController {
     @GetMapping("menu")
     public String menuPage(Model model) {
         List<PizzaModel> pizzas = pizzaService.findAll();
+
         model.addAttribute("pizzas", pizzas);
 
         return "menuPage"; /*nazwa szablonu*/

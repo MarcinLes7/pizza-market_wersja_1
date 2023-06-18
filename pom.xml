@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>pl.wszib</groupId>
-    <artifactId>pizza-market</artifactId>
+    <artifactId>pizza-market_marcin</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>pizza-market</name>
     <description>pizza-market</description>
